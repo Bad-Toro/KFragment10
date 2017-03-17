@@ -28,7 +28,11 @@ TextView tV;
 
         tV = (TextView) v.findViewById(R.id.tV);
 
-        tV.setText(getArguments().getString("K"));
+        Contact ct = getArguments().getParcelable("K");
+
+        String s = ct.getFName() + " " + ct.getLName();
+
+        tV.setText(s);
 
         return v;
     }

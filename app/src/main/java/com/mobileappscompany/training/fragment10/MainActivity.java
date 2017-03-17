@@ -37,9 +37,10 @@ public class MainActivity extends AppCompatActivity implements F1.IF1{
         if(f2 == null){
             f2 = new F2();
         }
+        Contact ct   = new Contact("001", "Fernando", "Toro");
 
         Bundle  bl = new Bundle();
-        bl.putString("K", "Android is great!");
+        bl.putParcelable("K", ct);
         f2.setArguments(bl);
 
         FragmentManager fm = getSupportFragmentManager();
